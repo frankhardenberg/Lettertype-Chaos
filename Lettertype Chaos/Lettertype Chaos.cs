@@ -28,11 +28,13 @@ namespace Lettertype_Chaos
 
         private void Convert_Click(object sender, EventArgs e)
         {
+            int i = 0;
             InputString = Input.Text;
 
             foreach (var Character in InputString)
             {
-                Font = Fonts[Random.Next(0, Fonts.Count)];
+                Font = Fonts[Random.Next(i, Fonts.Count)];
+                i++;
             }
 
             Output.Text = InputString;
