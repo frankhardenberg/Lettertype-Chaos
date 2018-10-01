@@ -33,7 +33,7 @@ namespace Lettertype_Chaos
 
             foreach (var Character in InputString)
             {
-                Font = Fonts[Random.Next(i, Fonts.Count)];
+                Output.Font = Fonts[Random.Next(i, Fonts.Count)];
                 i++;
             }
 
