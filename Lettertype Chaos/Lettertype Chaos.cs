@@ -27,14 +27,20 @@ namespace Lettertype_Chaos
 
         private void Convert_Click(object sender, EventArgs e)
         {
+            Output.Text = Input.Text;
+
             for (int i = 0; i < Input.Text.Length; i++)
             {
-                Input.Select(i, 1);
-                Input.SelectionFont = Fonts[Random.Next(i, Fonts.Count)];                
+                Output.Select(i, 1);
+                Output.SelectionFont = Fonts[Random.Next(i, Fonts.Count)];                
             }
         }
 
         private void Input_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void Output_TextChanged(object sender, EventArgs e)
         {
         }
     }

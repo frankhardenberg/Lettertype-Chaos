@@ -30,6 +30,7 @@
         {
             this.Input = new System.Windows.Forms.RichTextBox();
             this.Convert = new System.Windows.Forms.Button();
+            this.Output = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // Input
@@ -52,11 +53,21 @@
             this.Convert.UseVisualStyleBackColor = true;
             this.Convert.Click += new System.EventHandler(this.Convert_Click);
             // 
+            // Output
+            // 
+            this.Output.Location = new System.Drawing.Point(12, 292);
+            this.Output.Name = "Output";
+            this.Output.Size = new System.Drawing.Size(776, 193);
+            this.Output.TabIndex = 3;
+            this.Output.Text = "";
+            this.Output.TextChanged += new System.EventHandler(this.Output_TextChanged);
+            // 
             // LettertypeChaos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 298);
+            this.ClientSize = new System.Drawing.Size(800, 497);
+            this.Controls.Add(this.Output);
             this.Controls.Add(this.Convert);
             this.Controls.Add(this.Input);
             this.MaximizeBox = false;
@@ -70,6 +81,7 @@
 
         private System.Windows.Forms.RichTextBox Input;
         private System.Windows.Forms.Button Convert;
+        private System.Windows.Forms.RichTextBox Output;
     }
 }
 
